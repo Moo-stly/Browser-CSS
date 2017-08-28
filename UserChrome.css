@@ -1,0 +1,462 @@
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+
+#nav-bar
+{
+       height: 3px !important;
+       min-height: 1px!important;
+       opacity: 0 !important;
+       width:100% !important;
+       overflow: hidden !important;
+       position: fixed !important;
+
+}
+
+#nav-bar:hover,
+#nav-bar:focus,
+#nav-bar:active
+{
+       height: 30px !important;
+       opacity: 1 !important;
+       width:100% !important;
+       transition: height 1s opacity 1s linear 1s, visibility 1s linear 1s !important;
+}
+
+
+
+/*AGENT_SHEET*/
+
+/* Removes all borders of the urlbar in every form */
+#main-window[defaultfxtheme="true"] toolbar #urlbar,
+#main-window[defaultfxtheme="true"] toolbar .searchbar-textbox,
+#main-window[defaultfxtheme="true"] toolbar #urlbar:-moz-lwtheme,
+#main-window[defaultfxtheme="true"] toolbar .searchbar-textbox:-moz-lwtheme,
+#main-window[defaultfxtheme="true"] toolbar #urlbar:not(:-moz-lwtheme):not([focused]),
+#main-window[defaultfxtheme="true"] toolbar .searchbar-textbox:not(:-moz-lwtheme):not([focused]),
+#main-window[defaultfxtheme="true"] toolbar #urlbar:not(:-moz-lwtheme):not([focused]):hover,
+#main-window[defaultfxtheme="true"] toolbar .searchbar-textbox:not(:-moz-lwtheme):not([focused]):hover,
+#main-window[defaultfxtheme="true"] toolbar #urlbar:not(:-moz-lwtheme)[focused],
+#main-window[defaultfxtheme="true"] toolbar .searchbar-textbox:not(:-moz-lwtheme)[focused] {
+  border: 0px solid transparent !important;
+  border-color: transparent !important;
+}
+
+
+#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabs-newtab-button,
+#main-window #navigator-toolbox #TabsToolbar #tabbrowser-tabs .tabbrowser-tab .tab-stack .tab-content {
+    border:none  !important;
+}
+
+
+
+/* Gets rid of every tab border */
+
+/*==TABS==*/
+.tab-icon-image{
+filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
+  opacity:1!important;
+}
+
+.tab-icon-image[selected="true"]{
+    filter:none;
+}
+
+
+.tabbrowser-tab:hover .tab-icon-image{
+  opacity:1!important;
+    filter: contrast(1) sepia(1)  brightness(1) hue-rotate(-30deg)  saturate(2);
+}
+
+.tabbrowser-tabs .tab-content {
+ padding:2px 0px 0px 6px!important;
+}
+
+tabbrowser toolbarbutton[class^="scrollbutton"],
+#TabsToolbar toolbarbutton[class^="scrollbutton"]{
+    display: none !important;
+}
+
+/*Change the throbber*/
+.tabbrowser-tab .progress-bar { 
+    display: none !important; 
+}
+
+.tab-throbber[busy], .tab-throbber[progress] { 
+    filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
+    margin-left:4px;
+    list-style-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e3/Animated_heart5.gif")  !important; 
+}
+
+
+             
+/* Tab bar sizimg */
+
+#main-window[sizemode="normal"] #TabsToolbar
+    { padding:0px 2px 0px!important;
+        margin: -5px 0px 0px!important;}
+
+ .tab-icon-image 
+    {width: 13px !important;height: 13px !important}
+
+#main-window[sizemode="maximized"] ,
+#main-window[sizemode="fullscreen"]
+    {margin: 0px 0px 0px!important;}
+
+#main-window[sizemode="normal"] 
+    { padding:0px 2px 0px!important;
+        margin: 0px 1px 5px!important;}
+
+
+
+
+
+/*Just the tip
+#tabbrowser-tab-tooltip {
+	 display: none !important;}
+
+.tabbrowser-tab:before 
+    {content: attr(label) !important;display: none !important;}
+
+.tabbrowser-tab:hover::before {
+	 margin-left: -10px !important;
+	 display: block !important;
+	 background: #18052E!important;
+     color:#6C1E41;
+     opacity: 1!important;
+     width: auto!important;
+	 padding-left:10px!important;
+	 padding-right:10px!important;
+	 margin-top: 44px !important;
+	 position: fixed !important;}
+
+    
+/*=navbar=*/
+#nav-bar, #tbInspectorPrimary, #placesToolbar ,#urlbar
+    {color:#6C1E41 !important; background:#18052E !important;
+    font-family: Ubuntu !important; border: 0 !important; 
+    text-shadow: 0px 0px 0px !important;}
+
+
+#nav-bar{
+    box-shadow:none!important;}
+
+
+/* Tabs back and forth arrows*/
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down
+{list-style-image:url("http://i31.photobucket.com/albums/c387/rccompton/Tabarrowthingers-1.png")!important;}
+.tabbrowser-arrowscrollbox > .scrollbutton-up
+    {-moz-image-region:rect(0, 10px, 14px, 0)!important;}
+.tabbrowser-arrowscrollbox > .scrollbutton-down
+    {-moz-image-region:rect(0, 10px, 14px, 0px)!important;}
+    
+    
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down
+{background-image: -moz-linear-gradient(transparent, rgba(62, 50, 57,.10) 100%) !important; 
+}
+
+
+/*MENU*/
+menubar > menu, menupopup > menu, popup > menu, menuitem, toolbarbutton 
+{color: #6C1E41 !important;}
+
+menupopup > menu[_moz-menuactive="true"],
+menupopup > menuitem[_moz-menuactive="true"],
+popup > menu[_moz-menuactive="true"],
+popup > menuitem[_moz-menuactive="true"] 
+{font-weight: bold !important; font-size:13px  !important;}
+
+
+
+
+
+
+
+
+/***LIST STYLES****/
+
+
+    /*=NEWTAB button=*/
+
+.tabs-newtab-button, #TabsToolbar > #new-tab-button, #TabsToolbar > toolbarpaletteitem > #new-tab-button{
+   list-style-image: url("http://i.imgur.com/ZkbMSHx.png") !important;
+    filter: opacity(30%)!important;
+}
+.tabs-newtab-button:hover, #TabsToolbar > #new-tab-button:hover, #TabsToolbar > toolbarpaletteitem > #new-tab-button:hover{
+    background:#6C1E41 !important;
+    filter:none!important;
+}
+
+
+
+
+
+/* Buttons-back-fore-refreash-appmenu */
+#back-button .toolbarbutton-icon,#forward-button .toolbarbutton-icon,
+#reload-button .toolbarbutton-icon,#urlbar-reload-button .toolbarbutton-icon,
+#stop-button .toolbarbutton-icon,#urlbar-stop-button .toolbarbutton-icon,
+#tabbrowser-tabs tab .tab-close-button .toolbarbutton-icon,#appmenu-button .button-icon
+    {list-style-image:url("http://i.imgur.com/JuYCViA.png")!important;}
+    
+#back-button .toolbarbutton-icon
+    {-moz-image-region:rect(0, 11px, 13px, 0)!important;}
+#forward-button .toolbarbutton-icon
+    {-moz-image-region:rect(0, 22px, 13px, 11px)!important;}
+#reload-button .toolbarbutton-icon,#urlbar-reload-button .toolbarbutton-icon
+    {-moz-image-region:rect(0, 33px, 13px, 22px)!important;}
+#stop-button .toolbarbutton-icon,#urlbar-stop-button .toolbarbutton-icon,#tabbrowser-tabs tab .tab-close-button .toolbarbutton-icon
+    {-moz-image-region:rect(0, 44px, 13px, 33px)!important;}
+#appmenu-button .button-icon
+    {-moz-image-region:rect(0, 66px, 13px, 55px)!important;}
+
+
+
+/*Bookmark this Star*/
+#star-button 
+    {list-style-image: url(http://i31.photobucket.com/albums/c387/rccompton/star.png) !important;
+    -moz-image-region: rect(0, 15px, 15px, 0) !important;margin-bottom: 1px !important;}
+#star-button:not([starred]):hover 
+    {-moz-image-region: rect(15px, 15px, 30px, 0) !important;}
+#star-button[starred] 
+    {-moz-image-region: rect(30px, 15px, 45px, 0) !important;}
+
+/*Hidestuff*/
+#addon-bar 
+    {border: 0 none !important;background: #3e3239 !important;}
+#viewButton
+    {margin-left: -4px !important;margin-right: 0px !important;}
+         
+   /*bookmark folder icons*/
+menu.bookmark-item:not([query]):not([label="Bookmarks Toolbar"]) 
+    { list-style-image: url("http://i.imgur.com/cMZRqwN.png") !important;-moz-image-region: rect(0 16px 16px 0) !important;}
+menu.bookmark-item:not([query]):not([label="Bookmarks Toolbar"])[open] 
+    { list-style-image: url("http://i.imgur.com/KDeDxkJ.png") !important;-moz-image-region: rect(0 16px 16px 0) !important;}
+menuitem.bookmark-item 
+    { list-style-image: url("http://i.imgur.com/jV2m3it.png") !important;-moz-image-region: rect(0 16px 16px 0) !important;}
+       
+
+
+
+
+
+
+
+/* Removes things from browser UI */
+.tabbrowser-strip tooltip,
+
+.tabs-closebutton-box,
+.tab-close-button,
+.search-go-button,
+.searchbar-engine-image,
+.tabs-alltabs-button,
+
+#bookmarks-menu,
+#appmenu-button-container,
+#identity-box,
+#urlbar-container dropmarker,
+#appmenu-button .button-text,
+#appmenu-button .button-menu-dropmarker
+    {display:none!important;}
+    
+
+
+
+
+
+             
+        
+
+
+
+
+  
+  
+  
+  
+  
+  
+ /* =========TESTs and to be edited=================*/
+
+
+/*bookmark panel*/
+
+/* GENERAL */
+#editBookmarkPanel 
+    {-moz-appearance: none !important;border-image-slice: 26 50 22 20 fill !important;
+    border-image-source: url("http://i.imgur.com/bQ2LF08.png") !important;
+    border-image-width: 26px 50px 22px 20px !important;border-image-repeat: repeat !important;
+    -moz-window-shadow: none !important;margin-right: -36px !important;}
+#editBookmarkPanelContent {width: 300px !important;}
+
+/* REMOVE PANEL OVERLAY */
+#editBookmarkPanel > box > box,
+#editBookmarkPanel > box > box > box {
+border: none !important;
+background: none !important;
+color: #90A6A8 !important;
+box-shadow: none !important;
+}
+#editBookmarkPanel > box > box {
+margin: 5px 5px 5px !important;
+}
+#editBookmarkPanel > box > box > image {
+display: none !important;
+}
+
+/* INPUT FIELDS */
+#editBMPanel_tagsField,
+#editBMPanel_namePicker[droppable="false"] > .menulist-editable-box {
+background: #3e3239 !important;
+color: #90A6A8 !important;
+box-shadow: none !important;
+}
+
+/* BIG STAR ICON */
+#editBookmarkPanelStarIcon 
+    {list-style-image: url("http://i.imgur.com/t4YWU6X.png")!important}
+
+/* BUTTONS */
+#editBookmarkPanelBottomButtons > button,
+#editBookmarkPanelRemoveButton {
+-moz-appearance: button !important;
+background: none !important;
+border: none !important;
+color: #90A6A8 !important;
+font-size: 8pt !important;
+min-width: 76px !important;
+min-height: 19px !important;
+text-shadow: none !important;
+box-shadow: none !important;
+}
+
+/* FOLDER MENULIST */
+#editBMPanel_folderMenuList {
+-moz-appearance: menulist !important;
+padding: 0px !important;
+background: none !important;
+border: none !important;
+box-shadow: none !important;
+color: #90A6A8 !important;
+text-shadow: none !important;
+}
+.menulist-dropmarker {
+display: none !important;
+}
+
+/* FOLDER TREE */
+#editBookmarkPanel #editBMPanel_folderTree,
+#editBookmarkPanel #editBMPanel_newFolderBox,
+#editBookmarkPanel #editBMPanel_tagsSelector {
+margin-left: -55px !important;
+margin-right: 0px !important;
+border: solid 1px #777 !important;
+border-radius: 0px !important;
+background: #3e3239 !important;
+color: #90A6A8 !important;
+}
+#editBookmarkPanel #editBMPanel_folderTree > stack,
+#editBookmarkPanel #editBMPanel_tagsSelector > listrows {
+background: #3e3239 !important;
+}
+#editBookmarkPanel #editBMPanel_newFolderBox {
+background: none !important;
+border: none !important;
+}
+#editBookmarkPanel #editBMPanel_newFolderButton {
+border: none !important;
+background: none !important;
+list-style-image: url("http://i.imgur.com/KD1OXsf.png")
+!important;
+margin-top: -1px !important;
+opacity: 0.5 !important;
+}
+#editBookmarkPanel #editBMPanel_newFolderButton:hover:active {
+opacity: 0.4 !important;
+}
+/* DISCLOSURE TRIANGLES */
+#editBMPanel_folderTree treechildren::-moz-tree-twisty {
+-moz-appearance: none !important;
+list-style-image: url("http://i.imgur.com/r0gWoIt.png")
+!important;
+-moz-image-region: rect(0px 7px 9px 0px) !important;
+width: 7px !important;
+}
+#editBMPanel_folderTree treechildren::-moz-tree-twisty(open) {
+-moz-image-region: rect(0px 25px 9px 16px) !important;
+width: 9px !important;
+margin-left: -2px !important;
+}
+/* TREE ROW */
+#editBookmarkPanel
+#editBMPanel_folderTree treechildren::-moz-tree-cell-text,
+#editBookmarkPanel:-moz-system-metric(mac-graphite-theme)
+#editBMPanel_folderTree treechildren::-moz-tree-cell-text {
+color: #90A6A8 !important;
+}
+/* SELECTED ROW */
+#editBookmarkPanel
+#editBMPanel_folderTree treechildren::-moz-tree-row(selected) {
+background: #F0E8B7!important;
+border: none !important;
+color: #90A6A8 !important;
+}
+/* SELECTED ROW (GRAPHITE) */
+#editBookmarkPanel:-moz-system-metric(mac-graphite-theme)
+#editBMPanel_folderTree treechildren::-moz-tree-row(selected) {
+background: -moz-linear-gradient(top, #7f868d, #69717c) repeat-x !important;
+border: none !important;
+color: #90A6A8 !important;
+}
+
+/* EXPANDERS */
+#editBookmarkPanel #editBMPanel_foldersExpander,#editBookmarkPanel #editBMPanel_tagsSelectorExpander 
+    {-moz-appearance: none !important;background: none !important;border: none !important;
+    outline: none !important;box-shadow: none !important;
+    list-style-image: url("http://i.imgur.com/nkFdgl9.png")!important;}
+
+#editBookmarkPanel .expander-up {-moz-image-region: rect(0px 18px 18px 0px) !important;}
+#editBookmarkPanel .expander-up:hover:active {opacity: 0.75 !important;}
+#editBookmarkPanel .expander-down {-moz-image-region: rect(0px 36px 18px 18px) !important;}
+#editBookmarkPanel .expander-down:hover:active {opacity: 0.75 !important;}
+
+/* HIDE SCROLLBARS */
+#editBookmarkPanel #editBMPanel_folderTree scrollbar[orient="vertical"] {
+opacity: 0.0 !important;
+margin-left: -15px !important;
+}
+  
+  
+  
+    /*Transparency*/
+
+#urlbar ,#navbar
+    {background: none !important;border: none !important;border-radius: 2.5px 0 0 0 !important;
+    margin: 0 !important;box-shadow: none !important;}
+#urlbar:hover 
+    {background: -moz-linear-gradient(left, rgba(27,27,27,.0), rgba(27,27,27,0)) !important;}
+.urlbar-over-link-box 
+    {color: #222222 !important;}
+
+.tabbrowser-tab:not([selected="true"]) 
+{background-image: -moz-linear-gradient(rgba(27,27,27,.0), rgba(27,27,27,.0)) !important;}
+  
+  
+  /*=~!PAGES~=!*/
+
+/*Mangage addons page*/
+@-moz-document url(about:addons) {
+
+  .addon:not([selected]) .icon-container,
+  .addon:not([selected]) .warning,
+  .addon:not([selected]) .advancedinfo-container {
+    visibility: collapse !important ;
+  }
+  .addon:not([selected]) .name-container 
+  {font-size: 125% !important;}
+  
+  
+  }
+
+
+
