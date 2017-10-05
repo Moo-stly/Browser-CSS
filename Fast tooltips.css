@@ -21,6 +21,12 @@
 	position: fixed !important;
   border: 4px solid #6C1E41 !important;
   border-top: 0px !important;
+  transition: all  .37s;
 }
 
-
+.tabbrowser-tab[selected="true"]:hover::before {
+	margin-top: 45px !important;
+  background: -webkit-linear-gradient(#18052E, #6C1E41) !important;
+  /*content: '.::CURRENT TAB::.' !important;*/
+  transition: all  .37s;
+}
