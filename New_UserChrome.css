@@ -10,9 +10,6 @@
 }
 
 
-*{
-transition: all  .37s;
-}
 
 /*comment these lines to have normal tab width*/
 
@@ -65,6 +62,15 @@ background:rgba(70, 255, 170, 0.9) !important;
     margin-right: -16px !important;
 }
 
+/*restore empty favicon*/
+.tab-icon-image:not([src]):not([pinned]){
+	display:block !important;
+}
+
+.tab-throbber:not([busy]),
+.tab-throbber[busy] + .tab-icon-image:not([src]):not([pinned]){
+    display:none !important;
+}
 
 
 #tabbrowser-tabs tab .tab-close-button {
@@ -79,13 +85,16 @@ background:rgba(70, 255, 170, 0.9) !important;
 .tab-icon-image{
 filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
   opacity:1!important;
+    transition: all  .37s;
 }
 .tab-icon-image[selected="true"]{
     filter:none;
+    transition: all  .37s;
 }
 .tabbrowser-tab:hover .tab-icon-image{
   opacity:1!important;
     filter: contrast(1) sepia(1)  brightness(1) hue-rotate(-30deg)  saturate(2);
+    transition: all  .37s;
 }
 
 
@@ -191,8 +200,10 @@ filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
     min-height: 1px!important;
     opacity: 0 !important;
     overflow: hidden !important;
+    transition: all  .37s;
 }
 
+#main-window:hover + #nav-bar,
 #TabsToolbar:hover + #nav-bar,
 #nav-bar:hover,
 #nav-bar:focus,
@@ -260,10 +271,19 @@ filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
 }
 
 
+/****MENU ON LEFT****/
+@-moz-document url("chrome://browser/content/browser.xul") {
+  #PanelUI-button, #customization-panel-container,
+  #customization-panelWrapper .panel-arrow,
+  #ctr_panelui-button,
+  #wrapper-ctr_panelui-button {
+    -moz-box-ordinal-group: 0
+  }
 
-
-
-
+  #PanelUI-button {
+    background-position: 100% 0, calc(100% - 1px) 0, calc(100% - 2px) 0;
+  }
+}
 
 
 
