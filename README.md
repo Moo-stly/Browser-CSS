@@ -1,3 +1,4 @@
 # FF-CSS
-old window CSS:https://github.com/Moo-stly/FF-CSS/blob/master/UserChrome.css
-New window CSS: https://github.com/Moo-stly/FF-CSS/blob/master/New_UserChrome.css
+* [OLD and busted](https://github.com/Moo-stly/FF-CSS/blob/master/UserChrome.css)
+* [NEW hotness](https://github.com/Moo-stly/FF-CSS/blob/master/New_UserChrome.css)
+* [QUICKTIP](https://github.com/Moo-stly/FF-CSS/blob/master/Fast%20tooltips.css) *(must be kept seperate due to useragent) 
