@@ -185,7 +185,7 @@ filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
     background: #EAF2FA !important;
     box-shadow: none !important;
     background-clip: padding-box !important;
-    border-color: rgba(0,0,0,.25) !important;
+    border-color: rgba(0,0,0,.0) !important;
     border-radius: 0 !important;
 }
 
@@ -196,8 +196,8 @@ filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
 
 #titlebar:not(:hover)  #nav-bar,
 #nav-bar{
-    height: 3px !important;
-    min-height: 1px!important;
+    height: 1px !important;
+    min-height: 4px!important;
     opacity: 0 !important;
     overflow: hidden !important;
     transition: all  .37s;
