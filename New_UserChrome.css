@@ -1,16 +1,6 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 
-/*remove internal border*/
-#main-window:not([chromehidden*="toolbar"])[sizemode="normal"]{
-    margin-top:-1px!important;
-    margin-left:-1px!important;
-    margin-right:-1px!important;
-    margin-bottom: -1px !important;
-}
-
-
-
 /*comment these lines to have normal tab width*/
 
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
