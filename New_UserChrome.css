@@ -1,12 +1,13 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 
+
 /*comment these lines to have normal tab width*/
 
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
 min-width: 20px !important;
-max-width: 23px !important;
-max-height: 22px;
+max-width: 14px !important;
+max-height: 34px;
 }
 /*comment above to have normal tab width*/
 
@@ -35,9 +36,9 @@ background:rgba(70, 255, 170, 0.9) !important;
 
 
 #main-window[sizemode="normal"] #TabsToolbar .tabbrowser-tabs {
-    min-height: 15px !important;
-    max-height: 22px !important;
-    margin-top: -20px !important;
+    min-height: 30px !important;
+    max-height: 43px !important;
+    margin-top: -16px !important;
     margin-bottom: -1px !important;
     margin-left: -17px !important;
     margin-right: -16px !important;
@@ -45,7 +46,7 @@ background:rgba(70, 255, 170, 0.9) !important;
 
 #main-window[sizemode="maximized"] #TabsToolbar .tabbrowser-tabs ,
 #main-window[sizemode="fullscreen"] #TabsToolbar .tabbrowser-tabs {
-    min-height: 15px !important;
+    min-height: 20px !important;
     margin-top: -2px !important;
     margin-bottom: -1px !important;
     margin-left: -17px !important;
@@ -69,8 +70,8 @@ background:rgba(70, 255, 170, 0.9) !important;
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
     margin-left: 6px;
-    height: 13px;
-    width: 13px;
+    height: 15px;
+    width: 15px;
 }
 .tab-icon-image{
 filter: contrast(1) sepia(1)  brightness(.5) hue-rotate(280deg)  saturate(3);
