@@ -1,4 +1,5 @@
-# FF-CSS
-* [OLD and busted](https://github.com/Moo-stly/FF-CSS/blob/master/UserChrome.css)
-* [NEW hotness](https://github.com/Moo-stly/FF-CSS/blob/master/New_UserChrome.css)
-* [QUICKTIP](https://github.com/Moo-stly/FF-CSS/blob/master/Fast%20tooltips.css) *(must be kept seperate due to useragent) 
+# Browser Styles
+## Currently starting from scratch
+* [Waterfox](https://github.com/Moo-stly/FF-CSS/blob/master/Waterfox/UserChrome.css) ||85%||
+* [Firefox](https://github.com/Moo-stly/FF-CSS/blob/master/Firefox/UserChrome.css) ||30%||
+* [Vivaldi](https://github.com/Moo-stly/FF-CSS/blob/master/Vivaldi/UserChrome.css) ||0%||
